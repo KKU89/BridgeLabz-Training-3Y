@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Registration Form</title>
+</head>
+<body>
+    <h1>BridgeLabz Course Registration</h1>
+    <form>
+        <fieldset>
+            <legend>Candidate Details</legend>
+            <p>Name: <input type="text" name="name" required></p>
+            <p>Email: <input type="email" name="email" required></p>
+            <p>
+                Course:
+                <select name="course">
+                    <option value="frontend">Frontend Web Development</option>
+                    <option value="backend">Backend Java Development</option>
+                    <option value="cyber">Cybersecurity Fundamentals</option>
+                </select>
+            </p>
+        </fieldset>
+    </form>
+    <h2>Available Course Schedules</h2>
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Instructor</th>
+        </tr>
+        <tr>
+            <td>Monday - Wednesday</td>
+            <td>10:00 AM - 12:00 PM</td>
+            <td>Technical Mentor A</td>
+        </tr>
+        <tr>
+            <td>Thursday - Friday</td>
+            <td>02:00 PM - 04:00 PM</td>
+            <td>Technical Mentor B</td>
+        </tr>
+    </table>
+</body>
+</html>
