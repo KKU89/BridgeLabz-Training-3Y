@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f5efe6;
+    color: #241b15;
+}
+
+header {
+    padding: 25px 8%;
+    background: #5b1f1f;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.2rem;
+}
+
+nav a {
+    color: white;
+    margin-right: 25px;
+    text-decoration: none;
+}
+
+section {
+    min-height: 70vh;
+    padding: 12vh 10%;
+    border-bottom: 5px solid white;
+}
+
+section h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+section p {
+    max-width: 750px;
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+.parallax {
+    background-image: url("https://picsum.photos/1600/900?random=10");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 0 2px 5px black;
+}
+
+.gradient {
+    background: linear-gradient(135deg, #f7b267, #d95d39, #7a284b);
+    color: white;
+}
+
+.radial {
+    background: radial-gradient(circle at center, #ffe29a, #f08a5d, #b83b5e);
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #241b15;
+    color: white;
+}
