@@ -1,0 +1,27 @@
+﻿<!-- Q19: Form Security Attributes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Security</title>
+</head>
+<body>
+    <h1>Secure Authentication Form</h1>
+    <form action="#" method="post" autocomplete="off">
+        <p>
+            <label for="sec-user">Sensitive Username:</label>
+            <input type="text" id="sec-user" name="secure_username" required>
+        </p>
+        <p>
+            <label for="sec-pin">Security PIN:</label>
+            <input type="password" id="sec-pin" name="security_pin" required>
+        </p>
+        <p>
+            <input type="submit" value="Authenticate">
+        </p>
+    </form>
+    <p>
+        <strong>Security Note:</strong> Setting <code>autocomplete="off"</code> prevents browsers and shared/public machines from caching sensitive inputs into local storage or history, mitigating credential theft and shoulder-surfing attacks.
+    </p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!-- Q17: Form Target to Iframe -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Target Iframe</title>
+</head>
+<body>
+    <h1>Submit Data</h1>
+    <form action="result.html" method="get" target="submission_frame">
+        <p>
+            <label for="user-input">Enter Text:</label>
+            <input type="text" id="user-input" name="data" required>
+        </p>
+        <p>
+            <input type="submit" value="Submit Form">
+        </p>
+    </form>
+    <h2>Result Output:</h2>
+    <iframe name="submission_frame" width="100%" height="150" title="Result Frame"></iframe>
+</body>
+</html>

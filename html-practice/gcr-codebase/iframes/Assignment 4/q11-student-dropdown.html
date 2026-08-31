@@ -1,0 +1,33 @@
+﻿<!-- Q11: Student Information with Disabled Default Option -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information Form</title>
+</head>
+<body>
+    <h1>Student Enrollment</h1>
+    <form action="#" method="post">
+        <p>
+            <label for="student-name">Student Name:</label>
+            <input type="text" id="student-name" name="student_name" required>
+        </p>
+        <p>
+            <label for="roll-no">Roll Number:</label>
+            <input type="text" id="roll-no" name="roll_number" required>
+        </p>
+        <p>
+            <label for="course-select">Course:</label>
+            <select id="course-select" name="course" required>
+                <option value="" disabled selected>Select Course</option>
+                <option value="btech-cse">B.Tech Computer Science</option>
+                <option value="cyber-sec">Cybersecurity Specialization</option>
+                <option value="web-dev">Full Stack Web Development</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Enroll Student">
+        </p>
+    </form>
+</body>
+</html>

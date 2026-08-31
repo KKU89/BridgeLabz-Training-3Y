@@ -1,0 +1,32 @@
+﻿<!-- Q15: Payment Form Structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Form</title>
+</head>
+<body>
+    <h1>Secure Checkout</h1>
+    <form action="#" method="post">
+        <p>
+            <label for="card-holder">Cardholder Name:</label>
+            <input type="text" id="card-holder" name="cardholder" required>
+        </p>
+        <p>
+            <label for="card-num">Card Number:</label>
+            <input type="text" id="card-num" name="cardnumber" maxlength="16" placeholder="1234567890123456" required>
+        </p>
+        <p>
+            <label for="exp-date">Expiry Date:</label>
+            <input type="month" id="exp-date" name="expiry" required>
+        </p>
+        <p>
+            <label for="card-cvv">CVV:</label>
+            <input type="password" id="card-cvv" name="cvv" maxlength="3" placeholder="123" required>
+        </p>
+        <p>
+            <input type="submit" value="Pay Now">
+        </p>
+    </form>
+</body>
+</html>
