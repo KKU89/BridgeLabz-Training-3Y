@@ -1,0 +1,43 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f172a;
+}
+
+.loader-container {
+    display: flex;
+    gap: 15px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: #38bdf8;
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate ease-in-out;
+}
+
+.circle2 {
+    animation-delay: 0.2s;
+}
+
+.circle3 {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-25px);
+    }
+}
