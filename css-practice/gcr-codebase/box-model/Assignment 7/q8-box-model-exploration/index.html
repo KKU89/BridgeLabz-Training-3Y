@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Exploration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CSS Box Model Visualizer</h1>
+    <div class="flex-center">
+        <div class="margin-layer">
+            <span class="layer-label">Margin Layer</span>
+            <div class="border-layer">
+                <span class="layer-label">Border Layer</span>
+                <div class="padding-layer">
+                    <span class="layer-label">Padding Layer</span>
+                    <div class="content-layer">
+                        <p>Content Layer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comparison-container">
+        <div class="comp-box content-box">content-box (Width: 200px + Padding + Border)</div>
+        <div class="comp-box border-box">border-box (Total Width: 200px)</div>
+    </div>
+</body>
+</html>

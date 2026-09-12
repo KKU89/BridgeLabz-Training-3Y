@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Advanced Selectors Demo</h2>
+        
+        <form class="demo-form">
+            <input type="text" placeholder="Attribute Selector [type='text']">
+            <input type="password" placeholder="Password input">
+        </form>
+
+        <a href="https://github.com" target="_blank" class="external-link">Secure External Link</a>
+
+        <ul class="item-list">
+            <li>Item 1 (:nth-child odd/even demo)</li>
+            <li>Item 2 (:nth-child odd/even demo)</li>
+            <li>Item 3 (:nth-child odd/even demo)</li>
+            <li>Item 4 (:nth-child odd/even demo)</li>
+        </ul>
+
+        <div class="parent">
+            <p>Direct Child Paragraph (Parent > p)</p>
+            <div>
+                <p>Descendant Paragraph</p>
+            </div>
+        </div>
+        <p class="sibling">Adjacent Sibling (+ combinator)</p>
+        <p class="sibling">General Sibling (~ combinator)</p>
+    </div>
+</body>
+</html>

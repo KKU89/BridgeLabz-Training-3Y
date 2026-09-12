@@ -1,0 +1,83 @@
+﻿/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 1. Attribute Selector */
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid #3b82f6;
+    border-radius: 6px;
+}
+
+/* 2. Attribute Selector for links starting with https */
+a[href^="https"] {
+    display: inline-block;
+    color: #10b981;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* 3. Pseudo-classes (:nth-child, :hover) */
+.item-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.item-list li {
+    padding: 0.8rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.item-list li:nth-child(odd) {
+    background-color: #f1f5f9;
+}
+
+.item-list li:hover {
+    background-color: #e2e8f0;
+    cursor: pointer;
+}
+
+/* 4. Child Combinator (>) */
+.parent > p {
+    color: #2563eb;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+/* 5. Pseudo-element (::before) */
+.parent > p::before {
+    content: "📌 ";
+}
+
+/* 6. Adjacent Sibling Combinator (+) */
+.parent + p {
+    color: #d97706;
+    margin-top: 0.5rem;
+}
+
+/* 7. General Sibling Combinator (~) */
+.parent ~ p.sibling {
+    font-style: italic;
+}
