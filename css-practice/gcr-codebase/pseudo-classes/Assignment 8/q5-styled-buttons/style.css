@@ -1,0 +1,13 @@
+﻿* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #f1f5f9; min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+.button-grid { display: flex; gap: 1rem; flex-wrap: wrap; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.btn { padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: bold; border: 2px solid transparent; cursor: pointer; transition: all 0.2s ease-in-out; outline: none; }
+.btn-primary { background: #2563eb; color: #fff; box-shadow: 0 2px 6px rgba(37,99,235,0.3); }
+.btn-primary:hover { background: #1d4ed8; }
+.btn-primary:active { transform: scale(0.96); }
+.btn-primary:focus { outline: 3px solid rgba(37,99,235,0.4); }
+.btn-secondary { background: #64748b; color: #fff; }
+.btn-secondary:hover { background: #475569; }
+.btn-outline { background: transparent; border-color: #2563eb; color: #2563eb; }
+.btn-outline:hover { background: #2563eb; color: #fff; }
+.btn-disabled { background: #cbd5e1; color: #94a3b8; cursor: not-allowed; box-shadow: none; }

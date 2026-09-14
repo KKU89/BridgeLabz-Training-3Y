@@ -1,0 +1,26 @@
+﻿/* 1. Element Selector */
+body { font-family: Arial, sans-serif; background: #f8fafc; padding: 2rem; margin: 0; }
+header, footer { text-align: center; padding: 1rem; background: #0f172a; color: #fff; border-radius: 6px; }
+
+/* 2. ID Selector */
+#page-title { color: #38bdf8; }
+
+/* 3. Class Selector */
+.highlight { color: #16a34a; font-weight: bold; }
+
+/* 4. Attribute Selector */
+a[target="_blank"] { color: #ea580c; text-decoration: none; font-weight: bold; }
+
+/* 5. Direct Child Combinator (>) */
+.parent > p { color: #2563eb; }
+
+/* 6. Descendant Combinator (space) */
+.parent p { font-style: italic; }
+
+/* 7. Adjacent Sibling Combinator (+) */
+.sibling-head + p { background: #fef08a; padding: 0.3rem; }
+
+/* 8. General Sibling Combinator (~) */
+.sibling-head ~ p { margin-left: 1rem; }
+
+.content-box { background: #fff; padding: 1.5rem; margin: 1.5rem 0; border-radius: 8px; border: 1px solid #cbd5e1; }
