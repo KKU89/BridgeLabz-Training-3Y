@@ -1,0 +1,8 @@
+﻿* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background-color: #0f172a; padding: 2rem; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.principles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1000px; }
+.principle-card { background-color: #1e293b; color: white; padding: 1.5rem; border-radius: 8px; border: 1px solid #334155; transition: all 0.4s ease; }
+.principle-card h2 { color: #38bdf8; }
+.principle-card code { display: block; margin-top: 1rem; background: #0f172a; padding: 0.5rem; border-radius: 4px; font-size: 0.85rem; color: #38bdf8; }
+.principle-card:hover { background: #2563eb; }
+@media (max-width: 600px) { .principles-grid { grid-template-columns: 1fr; } }
