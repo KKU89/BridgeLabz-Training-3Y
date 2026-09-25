@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Pagination</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light py-5">
+    <main class="container">
+        <header class="mb-4">
+            <h1 class="fw-bold">Latest Articles</h1>
+            <hr>
+        </header>
+
+        <!-- Dummy Blog Posts List -->
+        <div class="row g-4 mb-5">
+            <div class="col-12">
+                <div class="card p-3 shadow-sm">
+                    <h2 class="h5 fw-bold">Understanding Web Security Fundamentals</h2>
+                    <p class="text-muted mb-0">Published on March 15, 2026 by Krishnakant</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card p-3 shadow-sm">
+                    <h2 class="h5 fw-bold">Building Responsive Layouts with Bootstrap Grid</h2>
+                    <p class="text-muted mb-0">Published on March 12, 2026 by Tech Desk</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Centered Pagination Component -->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center mb-4">
+                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+
+        <!-- Simple Pager Control Below -->
+        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+            <button class="btn btn-outline-secondary">&larr; Older Posts</button>
+            <button class="btn btn-outline-secondary">Newer Posts &rarr;</button>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

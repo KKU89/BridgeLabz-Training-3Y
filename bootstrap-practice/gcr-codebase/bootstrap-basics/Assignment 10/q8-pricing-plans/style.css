@@ -1,0 +1,8 @@
+﻿/* Custom Transitions for Q8 */
+.pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+}

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light py-5">
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-3">
+                        <h1 class="h4 mb-0">Sprint Task Tracker</h1>
+                        <!-- Pending Tasks Counter Badge -->
+                        <span class="fs-6">Pending Tasks <span class="badge bg-light text-primary ms-1">3</span></span>
+                    </div>
+                    <div class="card-body">
+                        <!-- List Group with Badges -->
+                        <div class="list-group mb-4">
+                            <div class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <div>
+                                    <h2 class="h6 mb-0 fw-bold">Fix Security Auth Vulnerability</h2>
+                                    <small class="text-muted">Assigned to Backend Team</small>
+                                </div>
+                                <span class="badge bg-danger">High Priority</span>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <div>
+                                    <h2 class="h6 mb-0 fw-bold">Update Responsive Navigation</h2>
+                                    <small class="text-muted">Assigned to Frontend Team</small>
+                                </div>
+                                <span class="badge bg-warning text-dark">Medium Priority</span>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <div>
+                                    <h2 class="h6 mb-0 fw-bold">Refactor Database Indexing</h2>
+                                    <small class="text-muted">Assigned to DevOps Team</small>
+                                </div>
+                                <span class="badge bg-info text-dark">Low Priority</span>
+                            </div>
+                        </div>
+
+                        <!-- Button with Embedded Badge -->
+                        <div class="text-end">
+                            <button type="button" class="btn btn-success shadow-sm">
+                                Completed Tasks <span class="badge bg-white text-success ms-1">12</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

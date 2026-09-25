@@ -1,0 +1,6 @@
+﻿/* Custom Utilities Overrides for Q2 */
+.img-fluid.rounded-circle {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
