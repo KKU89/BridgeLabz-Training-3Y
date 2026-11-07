@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q2 · Student Form Validator</title>
+  <style>
+    body { max-width: 680px; margin: 48px auto; padding: 0 20px; font: 16px Arial, sans-serif; color: #172033; background: #f3f6fb; }
+    form { padding: 24px; border: 1px solid #dce3ef; border-radius: 12px; background: white; }
+    .field { margin: 16px 0; }
+    label { display: block; margin-bottom: 6px; font-weight: bold; }
+    input { box-sizing: border-box; width: 100%; padding: 10px; border: 1px solid #aeb8c8; border-radius: 6px; font: inherit; }
+    input.is-valid { border: 2px solid #198754; }
+    input.is-invalid { border: 2px solid #dc3545; }
+    .field-error { display: block; min-height: 18px; margin-top: 4px; color: #bd2533; }
+    button { padding: 10px 16px; border: 0; border-radius: 6px; background: #3158c7; color: white; font: inherit; cursor: pointer; }
+    .success { color: #117443; }
+    .error-message { color: #bd2533; }
+  </style>
+  <script src="q2_student_form.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <p class="eyebrow">Question 2</p>
+    <h1>Student Registration</h1>
+    <form class="card form-card" id="student-form" novalidate>
+      <div class="field">
+        <label for="student-name">Name</label>
+        <input id="student-name" name="name" type="text" autocomplete="name" required>
+        <small class="field-error" id="name-error"></small>
+      </div>
+      <div class="field">
+        <label for="student-email">Email</label>
+        <input id="student-email" name="email" type="email" autocomplete="email" required>
+        <small class="field-error" id="email-error"></small>
+      </div>
+      <div class="field">
+        <label for="student-phone">Phone</label>
+        <input id="student-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required>
+        <small class="field-error" id="phone-error"></small>
+      </div>
+      <div class="field">
+        <label for="student-password">Password</label>
+        <input id="student-password" name="password" type="password" autocomplete="new-password" required>
+        <small class="field-error" id="password-error"></small>
+      </div>
+      <button type="submit">Validate registration</button>
+      <p id="student-result" class="message" aria-live="polite"></p>
+    </form>
+    <nav class="back-link"><a href="index.html">← All questions</a></nav>
+  </main>
+</body>
+</html>

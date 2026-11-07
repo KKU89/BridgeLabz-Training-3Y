@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q5 · Movie Ticket Booking</title>
+  <style>
+    body { max-width: 680px; margin: 48px auto; padding: 0 20px; font: 16px Arial, sans-serif; color: #172033; background: #f3f6fb; }
+    form { padding: 24px; border: 1px solid #dce3ef; border-radius: 12px; background: white; }
+    .field { margin: 16px 0; }
+    label { display: block; margin-bottom: 6px; font-weight: bold; }
+    input { box-sizing: border-box; width: 100%; padding: 10px; border: 1px solid #aeb8c8; border-radius: 6px; font: inherit; }
+    input.is-valid { border: 2px solid #198754; }
+    input.is-invalid { border: 2px solid #dc3545; }
+    .field-error { display: block; min-height: 18px; margin-top: 4px; color: #bd2533; }
+    button { padding: 10px 16px; border: 0; border-radius: 6px; background: #3158c7; color: white; font: inherit; cursor: pointer; }
+    .success { color: #117443; }
+    .error-message { color: #bd2533; }
+    .pre-line { white-space: pre-line; }
+  </style>
+  <script src="q5_movie_ticket_booking.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <p class="eyebrow">Question 5</p>
+    <h1>Movie Ticket Booking</h1>
+    <form class="card form-card" id="booking-form" novalidate>
+      <div class="field">
+        <label for="booking-name">Name</label>
+        <input id="booking-name" name="name" type="text" autocomplete="name" required>
+        <small class="field-error" id="booking-name-error"></small>
+      </div>
+      <div class="field">
+        <label for="booking-email">Email</label>
+        <input id="booking-email" name="email" type="email" autocomplete="email" required>
+        <small class="field-error" id="booking-email-error"></small>
+      </div>
+      <div class="field">
+        <label for="booking-seats">Seats (1–10)</label>
+        <input id="booking-seats" name="seats" type="number" min="1" max="10" step="1" required>
+        <small class="field-error" id="booking-seats-error"></small>
+      </div>
+      <button type="submit">Book tickets</button>
+      <p id="booking-result" class="message" aria-live="polite"></p>
+    </form>
+    <nav class="back-link"><a href="index.html">← All questions</a></nav>
+  </main>
+</body>
+</html>
