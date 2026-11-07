@@ -1,0 +1,210 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.5;
+    padding: 2.5rem 1rem;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header */
+.app-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.app-header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* Card */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.input-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label-hint {
+    font-size: 0.825rem;
+    color: #6b7280;
+    font-weight: normal;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    min-height: 120px;
+}
+
+textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+textarea.input-warning {
+    border-color: #eab308;
+}
+
+textarea.input-danger {
+    border-color: #ef4444;
+}
+
+/* Counter Container */
+.counter-container {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.counter-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.info-label {
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.counter-badge {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 0.15rem 0.65rem;
+    border-radius: 6px;
+    min-width: 2.75rem;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+/* Counter Color States */
+.counter-normal {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.counter-warning {
+    background-color: #fef08a;
+    color: #854d0e;
+}
+
+.counter-danger {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.total-label {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+/* Progress Bar */
+.progress-bar-track {
+    width: 100%;
+    height: 6px;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #0284c7;
+    border-radius: 9999px;
+    transition: width 0.15s ease, background-color 0.2s ease;
+}
+
+.progress-bar-fill.bar-warning {
+    background-color: #eab308;
+}
+
+.progress-bar-fill.bar-danger {
+    background-color: #ef4444;
+}
+
+.limit-alert {
+    font-size: 0.85rem;
+    color: #dc2626;
+    font-weight: 600;
+    min-height: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+/* Action Row */
+.action-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background-color: #e5e7eb;
+    color: #111827;
+}

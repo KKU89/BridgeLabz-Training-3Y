@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 - Dynamic Product List Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Dynamic Product List Manager</h1>
+            <p class="subtitle">Add, edit inline, and delete products with event delegation</p>
+        </header>
+
+        <section class="card">
+            <!-- Product Input Form -->
+            <form id="productForm" class="input-form">
+                <input 
+                    type="text" 
+                    id="productInput" 
+                    placeholder="Enter product name (e.g., Wireless Mouse)..." 
+                    autocomplete="off"
+                >
+                <button type="submit" id="addBtn" class="btn btn-primary">Add Product</button>
+            </form>
+            <p id="errorMessage" class="error-text" aria-live="polite"></p>
+
+            <!-- Product List Stats -->
+            <div class="list-meta">
+                <h2>Product Catalog</h2>
+                <span id="productCount" class="badge">0 products</span>
+            </div>
+
+            <!-- Parent UL for Event Delegation -->
+            <ul id="productList" class="product-list">
+                <!-- Products will be dynamically inserted here -->
+            </ul>
+
+            <!-- Empty List State -->
+            <div id="emptyState" class="empty-state">
+                <p>No products yet. Enter a product name above to get started!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="product-manager.js"></script>
+</body>
+</html>

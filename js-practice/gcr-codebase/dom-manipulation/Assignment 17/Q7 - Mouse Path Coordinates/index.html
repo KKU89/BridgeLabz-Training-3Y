@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7 - Mouse Path Coordinates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Mouse Path & Coordinates Logger</h1>
+            <p class="subtitle">Live tracking of <code>clientX</code> and <code>clientY</code> inside a 400&times;400 box with double-click markers</p>
+        </header>
+
+        <section class="card">
+            <!-- Coordinates Readout Cards -->
+            <div class="coords-dashboard">
+                <div class="coord-card">
+                    <span class="coord-label">clientX</span>
+                    <span class="coord-value" id="clientXVal">0</span>
+                    <span class="coord-hint">Viewport X</span>
+                </div>
+                <div class="coord-card">
+                    <span class="coord-label">clientY</span>
+                    <span class="coord-value" id="clientYVal">0</span>
+                    <span class="coord-hint">Viewport Y</span>
+                </div>
+                <div class="coord-card">
+                    <span class="coord-label">Box Local (X, Y)</span>
+                    <span class="coord-value" id="localCoordVal">(0, 0)</span>
+                    <span class="coord-hint">Relative to 400&times;400 box</span>
+                </div>
+            </div>
+
+            <!-- The 400x400 Tracking Canvas Box -->
+            <div class="tracker-wrapper">
+                <div id="trackingBox" class="tracking-box">
+                    <!-- Subtle Crosshair & Grid Guidelines -->
+                    <div class="crosshair-x" id="crosshairX"></div>
+                    <div class="crosshair-y" id="crosshairY"></div>
+
+                    <!-- Watermark Instruction -->
+                    <div class="box-instructions" id="boxInstructions">
+                        <span>Move mouse to track coordinates</span>
+                        <small>Double-click to place a red marker dot</small>
+                    </div>
+
+                    <!-- Red dots will be placed here dynamically -->
+                </div>
+            </div>
+
+            <!-- Footer Meta & Actions -->
+            <div class="tracker-footer">
+                <div class="stats-col">
+                    <span class="stat-badge">
+                        Dots Placed: <strong id="dotCount">0</strong>
+                    </span>
+                    <span id="trackerStatus" class="tracker-status status-idle">Status: Idle</span>
+                </div>
+                <button type="button" id="clearDotsBtn" class="btn btn-secondary">Clear Red Dots</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="mouse-tracker.js"></script>
+</body>
+</html>

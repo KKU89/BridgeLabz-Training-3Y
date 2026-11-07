@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6 - Real Time Table Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Student Directory Filter</h1>
+            <p class="subtitle">Case-insensitive, real-time filtering across Student Name, Branch, and CGPA</p>
+        </header>
+
+        <section class="card">
+            <!-- Search Controls -->
+            <div class="filter-controls">
+                <div class="search-box">
+                    <span class="search-icon">&#128269;</span>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search by name, branch, or CGPA..." 
+                        autocomplete="off"
+                    >
+                    <button type="button" id="clearBtn" class="clear-btn" title="Clear search">&times;</button>
+                </div>
+                <div class="result-count">
+                    <span id="matchStats">Showing 8 of 8 students</span>
+                </div>
+            </div>
+
+            <!-- Student Table -->
+            <div class="table-responsive">
+                <table class="student-table" id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Student Name</th>
+                            <th>Branch</th>
+                            <th>CGPA</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td>1</td>
+                            <td class="name-cell">Aarav Sharma</td>
+                            <td><span class="badge branch-cs">Computer Science</span></td>
+                            <td class="cgpa-cell">9.6</td>
+                            <td><span class="status-pill status-honor">Dean's List</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="name-cell">Diya Patel</td>
+                            <td><span class="badge branch-it">Information Technology</span></td>
+                            <td class="cgpa-cell">8.9</td>
+                            <td><span class="status-pill status-good">Good Standing</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="name-cell">Rohan Verma</td>
+                            <td><span class="badge branch-ece">Electronics & Communication</span></td>
+                            <td class="cgpa-cell">7.8</td>
+                            <td><span class="status-pill status-good">Good Standing</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="name-cell">Ananya Iyer</td>
+                            <td><span class="badge branch-ds">Data Science & AI</span></td>
+                            <td class="cgpa-cell">9.4</td>
+                            <td><span class="status-pill status-honor">Dean's List</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="name-cell">Kabir Mehta</td>
+                            <td><span class="badge branch-mech">Mechanical Engineering</span></td>
+                            <td class="cgpa-cell">8.2</td>
+                            <td><span class="status-pill status-good">Good Standing</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="name-cell">Pooja Nair</td>
+                            <td><span class="badge branch-cs">Computer Science</span></td>
+                            <td class="cgpa-cell">9.1</td>
+                            <td><span class="status-pill status-honor">Dean's List</span></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td class="name-cell">Vikram Malhotra</td>
+                            <td><span class="badge branch-civil">Civil Engineering</span></td>
+                            <td class="cgpa-cell">7.4</td>
+                            <td><span class="status-pill status-good">Good Standing</span></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td class="name-cell">Sneha Kulkarni</td>
+                            <td><span class="badge branch-bio">Biotechnology</span></td>
+                            <td class="cgpa-cell">8.7</td>
+                            <td><span class="status-pill status-good">Good Standing</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- No Results Message Row -->
+            <div id="noResults" class="no-results hidden">
+                <div class="no-results-icon">&#128270;</div>
+                <h3>No results found</h3>
+                <p>No student records matched your search query. Try typing another name, branch, or CGPA.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="table-filter.js"></script>
+</body>
+</html>

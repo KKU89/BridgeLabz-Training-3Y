@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8 - Custom JavaScript Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Custom JavaScript Dropdown</h1>
+            <p class="subtitle">Built entirely without the <code>&lt;select&gt;</code> element, using event capturing for outside-click dismissal</p>
+        </header>
+
+        <section class="card">
+            <div class="field-label">Preferred Programming Language</div>
+
+            <!-- Custom Dropdown Container (No <select> tag used) -->
+            <div class="custom-dropdown" id="customDropdown">
+                <!-- Dropdown Trigger Button -->
+                <button 
+                    type="button" 
+                    class="dropdown-trigger" 
+                    id="dropdownTrigger" 
+                    aria-haspopup="listbox" 
+                    aria-expanded="false"
+                >
+                    <span class="selected-text" id="selectedText">Select a Language...</span>
+                    <span class="chevron-arrow" id="chevronArrow">&#9662;</span>
+                </button>
+
+                <!-- Dropdown Menu Options -->
+                <ul class="dropdown-menu" id="dropdownMenu" role="listbox">
+                    <li class="dropdown-item" role="option" data-value="javascript">
+                        <span class="item-icon">&#9874;</span> JavaScript (ES6+)
+                    </li>
+                    <li class="dropdown-item" role="option" data-value="typescript">
+                        <span class="item-icon">&#9670;</span> TypeScript
+                    </li>
+                    <li class="dropdown-item" role="option" data-value="python">
+                        <span class="item-icon">&#128013;</span> Python
+                    </li>
+                    <li class="dropdown-item" role="option" data-value="golang">
+                        <span class="item-icon">&#9889;</span> Go (Golang)
+                    </li>
+                    <li class="dropdown-item" role="option" data-value="rust">
+                        <span class="item-icon">&#9881;</span> Rust
+                    </li>
+                    <li class="dropdown-item" role="option" data-value="cpp">
+                        <span class="item-icon">&#9733;</span> C++
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Selection Feedback Display -->
+            <div class="selection-feedback" id="selectionFeedback">
+                <span>Current Selection:</span>
+                <strong id="feedbackValue">None</strong>
+            </div>
+
+            <!-- Technical Explainer Box -->
+            <div class="concept-explainer">
+                <div class="explainer-title">
+                    <span class="icon">&#128161;</span> Under the Hood: Event Capturing Phase
+                </div>
+                <p>
+                    Outside click detection is attached using <code>document.addEventListener('click', handler, true)</code>. 
+                    The <code>true</code> argument activates the <strong>Capturing Phase (Trickling)</strong>, intercepting the click 
+                    as it descends from the document root before reaching target elements or entering the bubbling phase.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="custom-dropdown.js"></script>
+</body>
+</html>

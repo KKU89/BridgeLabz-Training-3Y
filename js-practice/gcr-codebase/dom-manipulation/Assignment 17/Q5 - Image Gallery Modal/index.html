@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5 - Image Gallery Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Curated Image Gallery</h1>
+            <p class="subtitle">Click any image to expand. Demonstrating <code>event.stopPropagation()</code> on modal dialogs.</p>
+        </header>
+
+        <!-- 6 Image Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Image 1 -->
+            <div class="gallery-item" data-title="Alpine Peaks at Sunrise" data-full="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80">
+                <div class="image-wrapper">
+                    <img 
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" 
+                        alt="Alpine Peaks at Sunrise"
+                        loading="lazy"
+                    >
+                    <div class="item-overlay">
+                        <span class="overlay-title">Alpine Peaks</span>
+                        <span class="overlay-hint">Click to enlarge</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="gallery-item" data-title="Misty Forest Pathway" data-full="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80">
+                <div class="image-wrapper">
+                    <img 
+                        src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" 
+                        alt="Misty Forest Pathway"
+                        loading="lazy"
+                    >
+                    <div class="item-overlay">
+                        <span class="overlay-title">Misty Forest</span>
+                        <span class="overlay-hint">Click to enlarge</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="gallery-item" data-title="Ocean Waves on Coastal Cliffs" data-full="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80">
+                <div class="image-wrapper">
+                    <img 
+                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" 
+                        alt="Ocean Waves on Coastal Cliffs"
+                        loading="lazy"
+                    >
+                    <div class="item-overlay">
+                        <span class="overlay-title">Coastal Breeze</span>
+                        <span class="overlay-hint">Click to enlarge</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="gallery-item" data-title="Golden Desert Dunes" data-full="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80">
+                <div class="image-wrapper">
+                    <img 
+                        src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" 
+                        alt="Golden Desert Dunes"
+                        loading="lazy"
+                    >
+                    <div class="item-overlay">
+                        <span class="overlay-title">Desert Dunes</span>
+                        <span class="overlay-hint">Click to enlarge</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="gallery-item" data-title="Modern City Skyline at Dusk" data-full="https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&fit=crop&w=1200&q=80">
+                <div class="image-wrapper">
+                    <img 
+                        src="https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&fit=crop&w=600&q=80" 
+                        alt="Modern City Skyline at Dusk"
+                        loading="lazy"
+                    >
+                    <div class="item-overlay">
+                        <span class="overlay-title">City Skyline</span>
+                        <span class="overlay-hint">Click to enlarge</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="gallery-item" data-title="Calm Reflection Lake" data-full="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80">
+                <div class="image-wrapper">
+                    <img 
+                        src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" 
+                        alt="Calm Reflection Lake"
+                        loading="lazy"
+                    >
+                    <div class="item-overlay">
+                        <span class="overlay-title">Mirror Lake</span>
+                        <span class="overlay-hint">Click to enlarge</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Backdrop -->
+    <div class="modal-backdrop" id="imageModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <!-- Modal Dialog Box (Clicking here will NOT close modal due to stopPropagation) -->
+        <div class="modal-dialog" id="modalDialog">
+            <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <img src="" alt="" id="modalImg" class="modal-image">
+            </div>
+            <div class="modal-footer">
+                <h3 id="modalTitle" class="modal-title"></h3>
+                <p class="modal-note">Notice: Clicking anywhere inside this card is intercepted with <code>event.stopPropagation()</code>. Clicking outside on the dark backdrop closes it.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="image-gallery.js"></script>
+</body>
+</html>

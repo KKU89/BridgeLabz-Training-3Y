@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2 - Live Character Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Live Character Counter</h1>
+            <p class="subtitle">Real-time character tracking with dynamic color warnings and typing blockers</p>
+        </header>
+
+        <section class="card">
+            <div class="form-group">
+                <label for="messageInput" class="input-label">
+                    Your Message
+                    <span class="label-hint">(Max 100 characters)</span>
+                </label>
+                
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Type your message here... Notice the counter update as you type."
+                    rows="5"
+                ></textarea>
+            </div>
+
+            <!-- Character Counter Display -->
+            <div class="counter-container">
+                <div class="counter-info">
+                    <span class="info-label">Remaining:</span>
+                    <span id="remainingCount" class="counter-badge counter-normal">100</span>
+                    <span class="total-label">/ 100</span>
+                </div>
+
+                <div class="progress-bar-track">
+                    <div id="progressBar" class="progress-bar-fill"></div>
+                </div>
+
+                <p id="limitAlert" class="limit-alert" aria-live="polite"></p>
+            </div>
+
+            <!-- Actions -->
+            <div class="action-row">
+                <button type="button" id="resetBtn" class="btn btn-secondary">Reset Counter</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="character-counter.js"></script>
+</body>
+</html>

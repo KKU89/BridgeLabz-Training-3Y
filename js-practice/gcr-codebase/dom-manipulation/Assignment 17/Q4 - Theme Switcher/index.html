@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 - Theme Switcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <div class="container">
+        <header class="app-header">
+            <h1>Theme Switcher</h1>
+            <p class="subtitle">Dynamically toggling application themes using <code>setAttribute()</code> and <code>data-theme</code></p>
+        </header>
+
+        <!-- Theme Selection Control Card -->
+        <section class="card controls-card">
+            <h2>Select a Theme</h2>
+            <p class="section-desc">Clicking any button changes the <code>data-theme</code> attribute on the <code>&lt;body&gt;</code> element.</p>
+
+            <div class="theme-buttons">
+                <button type="button" class="btn theme-btn active" data-theme-target="light">
+                    <span class="icon">&#9728;</span> Light Theme
+                </button>
+                <button type="button" class="btn theme-btn" data-theme-target="dark">
+                    <span class="icon">&#9790;</span> Dark Theme
+                </button>
+                <button type="button" class="btn theme-btn" data-theme-target="blue">
+                    <span class="icon">&#9830;</span> Blue Theme
+                </button>
+            </div>
+
+            <div class="theme-status">
+                <span>Current Body Attribute:</span>
+                <code id="currentThemeDisplay">data-theme="light"</code>
+            </div>
+        </section>
+
+        <!-- Interactive Preview Dashboard -->
+        <section class="card preview-card">
+            <div class="preview-header">
+                <h3>Live Theme Preview</h3>
+                <span class="badge">Active</span>
+            </div>
+
+            <p class="preview-text">
+                Notice how background colors, typography contrast, borders, and interactive accents instantly adapt to the selected color palette.
+            </p>
+
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <span class="metric-label">Active Users</span>
+                    <span class="metric-value">2,845</span>
+                    <span class="metric-trend positive">+14.2%</span>
+                </div>
+                <div class="metric-box">
+                    <span class="metric-label">System Performance</span>
+                    <span class="metric-value">99.8%</span>
+                    <span class="metric-trend positive">Optimal</span>
+                </div>
+                <div class="metric-box">
+                    <span class="metric-label">Open Tickets</span>
+                    <span class="metric-value">12</span>
+                    <span class="metric-trend neutral">-3 resolved</span>
+                </div>
+            </div>
+
+            <div class="preview-actions">
+                <button class="btn btn-accent">Action Button</button>
+                <button class="btn btn-outline">Secondary Action</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="theme-switcher.js"></script>
+</body>
+</html>
